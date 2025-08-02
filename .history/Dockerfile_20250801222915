@@ -66,8 +66,8 @@ WORKDIR /var/www/html/churchcrm
 
 # Set appropriate permissions for writable directories (ChurchCRM needs these)
 # These paths are now relative to /var/www/html/churchcrm.
-RUN chown -R www-data:www-data temp src/session demo/Images/Person demo/Images/Family && \
-    chmod -R 775 temp src/session demo/Images/Person demo/Images/Family
+RUN chown -R www-data:www-data temp session demo/Images/Person demo/Images/Family && \
+    chmod -R 775 temp session demo/Images/Person demo/Images/Family
 
 # --- Apache Configuration ---
 # Create the directory for sites-available
